@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 23px;
+}
+
+body {
+  background-color: rgb(99, 181, 229)
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  background-color: darkslategray;
+  border-bottom: 5px solid rgb(246, 255, 0);
+}
+
+.elem a {
+  text-decoration: none;
+  color: darksalmon;
+}
+
+.elem {
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.elem:hover {
+  background-color: rgb(246, 255, 0);
+  transform: scale(1.1);
+}
+
+.block-child-elem .elem {
+  border: 1px solid rgba(178, 34, 34, 0.082);
+}
+
+.block-child-elem,
+.sec-block-child-elem {
+  position: absolute;
+  background-color: rgb(246, 255, 0);
+  display: none;
+  top: 100%;
+  transition: .2s;
+}
+
+.elem:hover .block-child-elem,
+.block-child-elem .elem:hover .sec-block-child-elem {
+  display: block;
+}
+
+.sec-block-child-elem .elem {
+  padding: 10px;
+  font-size: 19px;
+}
+
+.block-child-elem .elem:hover {
+  background-color: rgb(38, 0, 255);
+  transform: scale(1.1);
+}
+
+.sec-block-child-elem {
+  left: 100%;
+  top: 0;
+}
